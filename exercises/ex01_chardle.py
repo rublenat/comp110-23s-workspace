@@ -1,4 +1,4 @@
-"""EX01 - Chardle - A cute step towards Wordle"""
+"""EX01 - Chardle - A cute step towards Wordle."""
 __author__ = "730396580"
 
 enter_a_word = str = input("Enter a 5-character word: ")
@@ -30,7 +30,7 @@ if (enter_a_single_letter == enter_a_word[4]):
 instances_count = 0
 
 if enter_a_single_letter == enter_a_word[0]:
-    instances_count  = instances_count + 1
+    instances_count = instances_count + 1
 if enter_a_single_letter == enter_a_word[1]:
     instances_count = instances_count + 1
 if enter_a_single_letter == enter_a_word[2]:
@@ -46,9 +46,3 @@ if (instances_count > 1):
     print(instances_count, "instances of " + enter_a_single_letter + " found in " + enter_a_word)
 if (instances_count == 0):
     print("No instances of " + enter_a_single_letter + " found in " + enter_a_word)
-
-
-           
-
-
-
