@@ -1,12 +1,12 @@
 """EX02 - One Shot Wordle."""
-__author__ : "730396580"
+__author__ = "730396580"
 
 secret_word: str = "python"
 length_of_secret_word: int = len(secret_word)
 guess_word: str = input(f"What is your {length_of_secret_word}-letter guess? ")
 
 while len(guess_word) != length_of_secret_word:
-    guess_word: str = input(f"That was not {length_of_secret_word} letters! Try again: ")
+    guess_word = input(f"That was not {length_of_secret_word} letters! Try again: ")
 
 WHITE_BOX: str = "\U00002B1C"
 GREEN_BOX: str = "\U0001F7E9"
@@ -22,12 +22,12 @@ while idx < length_of_secret_word:
         alternate_letter: bool = False
         alternate_idx: int = 0
 
-        while alternate_letter != True and alternate_idx < length_of_secret_word:
+        while alternate_letter is not True and alternate_idx < length_of_secret_word:
             if secret_word[alternate_idx] == guess_word[idx]:
                 alternate_letter = True
             else:
                 alternate_idx = alternate_idx + 1
-        if alternate_letter == True:
+        if alternate_letter is True:
             resulting_emoji = resulting_emoji + YELLOW_BOX
         else:
             resulting_emoji = resulting_emoji + WHITE_BOX
