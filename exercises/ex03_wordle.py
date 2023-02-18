@@ -53,7 +53,7 @@ def main() -> None:
     turns: int = 1
     guess_word: str = ""
 
-    while (turns < len(secret)) and (guess_word != secret):
+    while (turns <= 6) and (guess_word != secret):
         print(f"=== Turn {turns}/6 ===")
         guess_word = input_guess(len(secret))
         print(emojified(guess_word, secret))
