@@ -5,7 +5,7 @@ WHITE_BOX: str = "\U00002B1C"
 GREEN_BOX: str = "\U0001F7E9"
 YELLOW_BOX: str = "\U0001F7E8"
 
-
+# Defines function that searches for a character in a word.
 def contains_char(word: str, character: str) -> bool:
     """Searches for given character in given word."""
     assert len(character) == 1
@@ -19,7 +19,7 @@ def contains_char(word: str, character: str) -> bool:
         idx = idx + 1
     return in_word
 
-
+# Defines a function that places different emoji boxes based on location and/or presence of letter.
 def emojified(guess: str, secret_word: str) -> str:
     """Returns emoji boxes based on whether characters in guess and secret word match."""
     assert len(guess) == len(secret_word)
@@ -37,7 +37,7 @@ def emojified(guess: str, secret_word: str) -> str:
         idx = idx + 1
     return emoji
 
-
+# Defines function where input must be the same characters as argument of the input_guess function.
 def input_guess(expected_length: int) -> str:
     """Given expected length will ask user for guess word of that same length."""
     word_given: str = input(f"Enter a {expected_length} character word: ")
@@ -46,7 +46,7 @@ def input_guess(expected_length: int) -> str:
         word_given = input(f"That wasn't {expected_length} chars! Try Again: ") 
     return word_given
 
-
+# Game loop, user has 6 tries to guess secret word
 def main() -> None:
     """The entry point of the program and the main game loop."""
     secret: str = "codes"
