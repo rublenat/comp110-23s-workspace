@@ -32,7 +32,7 @@ def concat(list1: list[int], list2: list[int]) -> list[int]:
     return new_list
 
 
-def sub(given_list: list[int], start_idx: int, stop_idx:int) -> list[int]:
+def sub(given_list: list[int], start_idx: int, stop_idx: int) -> list[int]:
     """Returns a subset of the given list starting from the start index and ending at the stop index - 1."""
     new_list: list[int] = list()
 
