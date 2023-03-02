@@ -2,8 +2,5 @@
 
 grocery_list: list[str] = ["bananas", "milk"]
 
-grocery_list.append("bread")
-
-
-
+grocery_list = grocery_list.append("bread")
 
