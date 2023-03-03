@@ -26,8 +26,10 @@ def sum_old_too(xs: list[float]) -> float:
 def sum(xs: list[float]) -> float:
     """Return sum of all elements in xs."""
     sum_total: float = 0.0
+    idx: int = 0
 
-    for item in range(0, len(xs)):
+    for idx in range(0, len(xs)):
+        item: int = xs[idx]
         sum_total += item
     
     return sum_total
