@@ -12,13 +12,22 @@ def sum_old(xs: list[float]) -> float:
     return sum_total
 
 
-def sum(xs: list[float]) -> float:
+def sum_old_too(xs: list[float]) -> float:
     """Return sum of all elements in xs."""
     sum_total: float = 0.0
-    idx: int = 0
 
     if len(xs) > 0:
         for item in xs:
             sum_total += item
+    
+    return sum_total
+
+
+def sum(xs: list[float]) -> float:
+    """Return sum of all elements in xs."""
+    sum_total: float = 0.0
+
+    for item in range(0, len(xs)+1):
+        sum_total += item
     
     return sum_total
