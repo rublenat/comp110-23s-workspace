@@ -20,6 +20,7 @@ player: str = ""
 points: int = 0
 
 
+#Greet Function.
 def greet() -> None:
     """Welcomes the player."""
     global player 
@@ -31,6 +32,7 @@ def greet() -> None:
     print(f"{ARROW} 1. You are trying to guess as many correct in a row as possible.")
     print(f"{ARROW} 2. We will keep track of how many you get in a row correct, displayed as 'points'.")
     print(f"{ARROW} 3. 'points' will restart at 0 everytime a coin flip is guessed incorrectly.")
+
 
 # Procedure Call.
 def multiplayer() -> None:
@@ -65,6 +67,7 @@ def multiplayer() -> None:
         print(f"You won {player_two}! {CONFETTI} You get bragging rights with a total of {player_two_points} points! {STAR_EYES}")
     if points == player_two_points:
         print(f"Welp! It's a tie. Guess both of you won with {points} points! (or neither of you) {TEAR}")
+
 
 # Custom function.
 def coin_flip(points_in_game: int) -> int:
