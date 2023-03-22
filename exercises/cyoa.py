@@ -20,7 +20,7 @@ player: str = ""
 points: int = 0
 
 
-#Greet Function.
+# Greet Function.
 def greet() -> None:
     """Welcomes the player."""
     global player 
